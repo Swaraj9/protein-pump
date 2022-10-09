@@ -1,0 +1,9 @@
+.menuItem{
+    border-color: var(--grey);
+    border-width: 0.1rem;
+    border-style: groove;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    width: 200px;
+    border-radius: 5px;
+}

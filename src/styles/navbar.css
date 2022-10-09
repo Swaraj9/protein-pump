@@ -1,0 +1,11 @@
+.navbar{
+    padding: 1rem;
+    display: flex;
+}
+
+.link{
+    text-decoration: none;
+    color: var(--white);
+    margin-right: 1rem;
+    font-size: 1.25rem;
+}

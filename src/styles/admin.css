@@ -1,0 +1,25 @@
+.admin{
+    display: flex;
+    flex-direction: column;
+}
+
+.adminCoupons, .adminMenu{
+    display: flex;
+    flex-direction: column;
+}
+
+.adminCouponsHeader, .adminMenuHeader{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.adminCouponsList{
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+.adminMenuList{
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
