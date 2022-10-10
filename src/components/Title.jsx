@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Title = ({children}) => {
+const Title = ({children, style}) => {
   return (
-    <div style={{fontSize: '1.5rem'}}>{children}</div>
+    <div style={{fontSize: '1.5rem', ...style}}>{children}</div>
   )
 }
 

@@ -3,6 +3,7 @@ import Coupon from '../components/Coupon'
 import MenuItem from '../components/MenuItem'
 import Title from '../components/Title'
 import '../styles/admin.css'
+import Button from '../components/Button'
 
 const Admin = () => {
   return (
@@ -10,7 +11,7 @@ const Admin = () => {
       <div className='adminCoupons'>
         <div className='adminCouponsHeader'>
           <Title>Coupons</Title>
-          <button className='adminCouponsAddButton'>Add Coupons</button>
+          <Button className='adminCouponsAddButton'>Add Coupons</Button>
         </div>
         <div className='adminCouponsList'>
           <Coupon/>
@@ -21,7 +22,7 @@ const Admin = () => {
       <div className='adminMenu'>
         <div className='adminMenuHeader'>
           <Title>Menu</Title>
-          <button className='adminMenuAddButton'>Add Menu Item</button>
+          <Button className='adminMenuAddButton'>Add Menu Item</Button>
         </div>
         <div className='adminMenuList'>
           <MenuItem/>

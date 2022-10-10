@@ -1,4 +1,19 @@
 .menu{
     display: grid;
     grid-template-columns: auto auto auto;
+    width: fit-content;
+    align-self: center;
+    gap: 1rem;
+}
+
+@media screen and (max-width: 800px) {
+    .menu{
+        grid-template-columns: auto auto;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .menu{
+        grid-template-columns: auto;
+    }
 }

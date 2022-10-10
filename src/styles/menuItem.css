@@ -1,9 +1,22 @@
+.menuItemMain{
+    padding: 1rem;
+    flex: 1;
+}
+
 .menuItem{
-    border-color: var(--grey);
-    border-width: 0.1rem;
-    border-style: groove;
-    margin-bottom: 0.5rem;
-    padding: 0.5rem;
+    background-color: var(--black);
     width: 200px;
-    border-radius: 5px;
+    height: 200px;
+    transition: all 0.25s;
+    display: flex;
+}
+
+.menuItem:hover{
+    width: 210px;
+    height: 210px;
+}
+
+.menuItemTop{
+    width: 10px;
+    background-color: var(--primary);
 }
