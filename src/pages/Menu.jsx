@@ -9,9 +9,13 @@ const Menu = () => {
   const [itemList, setItemList] = useState([]);
 
   const getMenuItems = async() =>{
-    const menuItemsSnapshot = await getDocs(collection(db, 'menu-items'));
-    const menuItemsList = menuItemsSnapshot.docs.map((doc) => doc.data());
-    setItemList(menuItemsList);
+    try{
+      const menuItemsSnapshot = await getDocs(collection(db, 'menu-items'));
+      const menuItemsList = menuItemsSnapshot.docs.map((doc) => doc.data());
+      setItemList(menuItemsList);
+    }catch(err){
+      alert(err.message);
+    }
   }
 
   useEffect(()=>{
@@ -20,7 +24,7 @@ const Menu = () => {
 
   return (
     <div className='menu'>
-      {itemList.map(item => <MenuItem title={item.title} description={item.description} imageLink={item.imageLink}/>)}
+      {itemList.map(item => <MenuItem title={item.title} description={item.description} imageLink={item.imageLink} price={item.price}/>)}
     </div>
   )
 }

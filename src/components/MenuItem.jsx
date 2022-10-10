@@ -2,15 +2,18 @@ import React from 'react'
 import '../styles/menuItem.css'
 import Title from './Title'
 
-const MenuItem = ({title, description, imageLink}) => {
+const MenuItem = ({title, description, imageLink, price}) => {
   return (
     <div className='menuItem'>
       <div className='menuItemMain'>
-        <Title style={{color:'var(--primary)'}} className='menuItemTitle'>{title}</Title>
+        <div className='menuItemHeader'>
+          <Title style={{color:'var(--primary)', textTransform:'capitalize'}}>{title}</Title>
+          <Title>{`${price} ₹`}</Title>
+        </div>
         <img 
+          className='menuItemImage'
           src={imageLink}
-          height='100%'
-          width='100%'
+          alt="MenuItemImage"
         />
         <div className='menuItemDescription'>
           {description}

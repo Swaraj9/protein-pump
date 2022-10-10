@@ -21,5 +21,13 @@
 
 .adminMenuList{
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto;
+    align-self: center;
+    gap: 1rem;
+}
+
+@media screen and (max-width: 900px) {
+    .adminMenuList{
+        grid-template-columns: auto;
+    }
 }

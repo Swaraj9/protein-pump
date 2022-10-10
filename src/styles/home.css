@@ -1,0 +1,32 @@
+.home{
+    margin: -1rem;
+}
+
+.homeHero{
+    padding: 1rem;
+    background-image: url('../media/chicken_banger.jpg');
+    background-size: 100%;
+    color: var(--white);
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-repeat: no-repeat;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.7);
+}
+
+
+.homeHeroTitle{
+    margin-top: 5rem;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    filter: blur(1.5px);
+    color: var(--primary);
+}
+
+.homeHeroText{
+    margin-bottom: 3rem;
+    text-align: center;
+}

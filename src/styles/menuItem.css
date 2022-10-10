@@ -5,18 +5,32 @@
 
 .menuItem{
     background-color: var(--black);
-    width: 200px;
-    height: 200px;
+    width: 400px;
     transition: all 0.25s;
     display: flex;
 }
 
 .menuItem:hover{
-    width: 210px;
-    height: 210px;
+    width: 410px;
 }
 
 .menuItemTop{
     width: 10px;
     background-color: var(--primary);
+}
+
+.menuItemTitle{
+    background-color: red;
+}
+
+.menuItemImage{
+    margin-top: 1.5rem;
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 1.25rem;
+}
+
+.menuItemHeader{
+    display: flex;
+    justify-content: space-between;
 }

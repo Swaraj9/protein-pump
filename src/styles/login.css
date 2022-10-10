@@ -1,0 +1,96 @@
+.login{
+    display: flex;
+    height: calc(100% + 2rem);
+    width: calc(100% + 2rem);
+    margin: -1rem;
+}
+
+.loginImage{
+    flex: 0.5;
+    display: block;
+    background-image: url('../media/chicken_banger.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    background-color: var(--black);
+    filter: brightness(0.5);
+}
+
+.loginMain{
+    flex: 0.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loginContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.loginNormal{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    margin-bottom: 1.5rem;
+}
+
+.loginButton{
+    background-color: var(--primary);
+    border-radius: 5px;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    border: none;
+    margin-bottom: 1rem;
+}
+
+.loginError{
+    background-color: red;
+    border-radius: 5px;
+    padding: 0.5rem;
+    border: 3px solid rgb(255, 100, 100);
+}
+
+.loginEmail{
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.loginEmailText{
+    margin-bottom: 0.5rem;
+    color: var(--primary);
+}
+
+.loginPassword{
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.loginPasswordText{
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+    color: var(--primary);
+}
+
+.loginInput{
+    border-radius: 5px;
+    border: none;
+    padding: 0.5rem;
+}
+
+@media screen and (max-width: 800px) {
+    .loginImage{
+        display: none;
+        flex: 0;
+    }
+
+    .loginMain{
+        flex: 1;
+    }
+}
