@@ -18,3 +18,19 @@
 .navbarLinks{
     flex: 1;
 }
+
+.navbarCart{
+    display: flex;
+    margin-right: 1rem;
+    align-items: center;
+    background-color: inherit;
+    color: inherit;
+    border: none;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+.navbarCartIcon{
+    margin-right: 0.75rem;
+    color: var(--primary);
+}

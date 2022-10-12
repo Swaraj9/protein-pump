@@ -1,8 +1,17 @@
 import React from 'react'
 import '../styles/menuItem.css'
 import Title from './Title'
+import Button from './Button'
+import { useCartContext } from '../context/CartContext'
 
 const MenuItem = ({title, description, imageLink, price}) => {
+
+  const {addItem} = useCartContext();
+
+  const addToCart = () => {
+    addItem({name: title, value: price});
+  }
+
   return (
     <div className='menuItem'>
       <div className='menuItemMain'>
@@ -18,6 +27,7 @@ const MenuItem = ({title, description, imageLink, price}) => {
         <div className='menuItemDescription'>
           {description}
         </div>
+        <Button onClick={addToCart} style={{alignSelf:'flex-end', marginTop:'1rem'}}>Add to Cart</Button>
       </div>
       <div className='menuItemTop'/>
     </div>

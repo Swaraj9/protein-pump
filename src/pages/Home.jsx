@@ -1,5 +1,4 @@
 import React from 'react'
-import Title from '../components/Title'
 import '../styles/home.css'
 
 const Home = () => {
