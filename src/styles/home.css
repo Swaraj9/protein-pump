@@ -5,7 +5,7 @@
 .homeHero{
     padding: 1rem;
     background-image: url('../media/chicken_banger.jpg');
-    background-size: 100%;
+    background-size: auto 100%;
     color: var(--white);
     background-position: center;
     display: flex;
@@ -14,6 +14,7 @@
     justify-content: center;
     background-repeat: no-repeat;
     box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.7);
+    height: 800px;
 }
 
 
@@ -29,4 +30,48 @@
 .homeHeroText{
     margin-bottom: 3rem;
     text-align: center;
+    width: 65%;
+    font-size: 1.5rem;
+}
+
+.homeMenu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.homeMenuItems{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    width: fit-content;
+    align-self: center;
+    gap: 2rem;
+}
+
+@media screen and (max-width: 1400px) {
+    .homeMenuItems{
+        grid-template-columns: auto auto;
+        gap: 1rem;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .homeMenuItems{
+        grid-template-columns: auto;
+        gap: 1rem;
+    }
+}
+
+.homeMenuLink{
+    background-color: var(--primary);
+    margin-top: 1rem;
+    color: var(--black);
+    text-decoration: none;
+    padding: 0.5rem;
+    border-radius: 5px;
+    align-self: flex-end;
+    margin-right: 3rem;
 }

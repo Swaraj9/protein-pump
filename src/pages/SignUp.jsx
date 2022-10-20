@@ -26,31 +26,36 @@ const SignUp = () => {
 
   return (
     <div className='signUp'>
+        <div className='signUpImage'/>
         <div className='signUpMain'>
-            <form onSubmit={handleSubmit}>
-                <div className='signUpEmail'>
-                    <div className='signUpEmailText'>Enter Your Email</div>
-                    <input 
-                        type='email'
-                        placeholder='abc@def.com'
-                        onChange={(e) => setEmail(e.target.value)}
-                        value={email}
-                    />
+            <div className='signUpContainer'>
+                <form className='signUpNormal' onSubmit={handleSubmit}>
+                    <div className='signUpEmail'>
+                        <div className='signUpEmailText'>Email</div>
+                        <input 
+                            className='signUpInput'
+                            type='email'
+                            placeholder='abc@def.com'
+                            onChange={(e) => setEmail(e.target.value)}
+                            value={email}
+                        />
+                    </div>
+                    <div className='signUpPassword'>
+                        <div className='signUpPasswordText'>Password</div>
+                        <input 
+                            className='signUpInput'
+                            type='password'
+                            placeholder='******'
+                            onChange={(e) => setPassword(e.target.value)}
+                            value={password}
+                        />
+                    </div>
+                    <button className='signUpButton' type='submit'>Sign Up</button>
+                    {error && <div className='signUpError'>{error}</div>}
+                </form>
+                <div className='signUpLogin'>
+                    Already have an account? <Link to="/">Log In</Link>
                 </div>
-                <div className='signUpPassword'>
-                    <div className='signUpPasswordText'>Password</div>
-                    <input 
-                        type='password'
-                        placeholder='******'
-                        onChange={(e) => setPassword(e.target.value)}
-                        value={password}
-                    />
-                </div>
-                <button type='submit'>Sign Up</button>
-                {error && <div className='signUpError'>{error}</div>}
-            </form>
-            <div className='signUpLogin'>
-                Already have an account? <Link to="/">Log In</Link>
             </div>
         </div>
     </div>

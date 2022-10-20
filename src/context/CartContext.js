@@ -18,7 +18,7 @@ export const CartContextProvider = ({children}) => {
         if(itemInItems){
             setItems(tempItemList);
         }else{
-            setItems([...items, {name: item.name, value: item.value, amount: 1}]);
+            setItems([...items, {name: item.name, value: item.value, amount: 1, priceLink: item.priceLink}]);
         }
     }
 
@@ -38,8 +38,12 @@ export const CartContextProvider = ({children}) => {
         }
     }
 
+    const clearItems = () => {
+        setItems([]);
+    }
+
     return(
-        <cartContext.Provider value={{items, addItem, removeItem}}>{children}</cartContext.Provider>
+        <cartContext.Provider value={{items, addItem, removeItem, clearItems}}>{children}</cartContext.Provider>
     )
 }
 

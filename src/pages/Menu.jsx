@@ -11,7 +11,7 @@ const Menu = () => {
   const getMenuItems = async() =>{
     try{
       const menuItemsSnapshot = await getDocs(collection(db, 'menu-items'));
-      const menuItemsList = menuItemsSnapshot.docs.map((doc) => doc.data());
+      const menuItemsList = menuItemsSnapshot.docs.map((doc) => {return{id: doc.id, ...doc.data()}});
       setItemList(menuItemsList);
     }catch(err){
       alert(err.message);
@@ -24,7 +24,7 @@ const Menu = () => {
 
   return (
     <div className='menu'>
-      {itemList.map(item => <MenuItem title={item.title} description={item.description} imageLink={item.imageLink} price={item.price}/>)}
+      {itemList.map(item => <MenuItem key={item.id} title={item.title} description={item.description} imageLink={item.imageLink} price={item.price} priceLink={item.priceLink}/>)}
     </div>
   )
 }

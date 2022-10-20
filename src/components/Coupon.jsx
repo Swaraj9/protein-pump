@@ -1,9 +1,12 @@
 import React from 'react'
 import '../styles/coupon.css'
 
-const Coupon = () => {
+const Coupon = ({code, discount}) => {
   return (
-    <div>Coupon</div>
+    <div className='coupon'>
+      <div className='couponCode'>{code}</div>
+      <div className='couponDiscount'>{discount}</div>
+    </div>
   )
 }
 

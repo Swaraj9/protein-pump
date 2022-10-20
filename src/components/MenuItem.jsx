@@ -4,12 +4,12 @@ import Title from './Title'
 import Button from './Button'
 import { useCartContext } from '../context/CartContext'
 
-const MenuItem = ({title, description, imageLink, price}) => {
+const MenuItem = ({title, description, imageLink, price, priceLink}) => {
 
   const {addItem} = useCartContext();
 
   const addToCart = () => {
-    addItem({name: title, value: price});
+    addItem({name: title, value: price, priceLink});
   }
 
   return (

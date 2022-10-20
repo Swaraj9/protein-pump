@@ -1,6 +1,8 @@
-import {initializeApp} from 'firebase/app'
-import {getFirestore} from 'firebase/firestore'
-import {getAuth} from 'firebase/auth'
+const {initializeApp} = require('firebase/app')
+const {getFirestore} = require('firebase/firestore')
+const {getAuth} = require('firebase/auth')
+
+const {collection} = require('firebase/firestore')
 
 const firebaseConfig = {
     apiKey: "AIzaSyDcZC0T3NmC9_9aD9ccw3PCHtoJk85SL7w",
@@ -16,5 +18,6 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 const auth = getAuth(app);
 
-export {db, auth};
-export default app;
+const menuItems = collection(db, 'menu-items')
+
+module.exports = {db, auth, app, menuItems};

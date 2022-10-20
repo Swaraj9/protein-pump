@@ -9,10 +9,11 @@ import PageNotFound from './pages/PageNotFound';
 import React from 'react';
 import SignUp from './pages/SignUp';
 import Login from './pages/Login';
-import ProtectedRoute from './components/ProtectedRoute';
 import { UserAuthContextProvider } from './context/UserAuthContext';
 import { CartContextProvider } from './context/CartContext';
 import Cart from './pages/Cart';
+import Prout from './components/Prout';
+import '@stripe/stripe-js'
 
 function App() {
   return (
@@ -22,13 +23,13 @@ function App() {
           <CartContextProvider>
             <Routes>
               <Route path='/' element={<Layout/>}>
-                <Route path="/" element={<Login/>}/>
-                <Route path="signup" element={<SignUp/>}/>
-                <Route path='cart' element={<Cart/>}/>
-                <Route path="home" element={<ProtectedRoute><Home/></ProtectedRoute>}/>
-                <Route path="menu" element={<ProtectedRoute><Menu/></ProtectedRoute>}/>
-                <Route path="gallery" element={<ProtectedRoute><Gallery/></ProtectedRoute>}/>
-                <Route path="admin" element={<ProtectedRoute admin><Admin/></ProtectedRoute>}/>
+                <Route path="/" element={<Prout log><Login/></Prout>}/>
+                <Route path="signup" element={<Prout log><SignUp/></Prout>}/>
+                <Route path='cart' element={<Prout><Cart/></Prout>}/>
+                <Route path="home" element={<Prout><Home/></Prout>}/>
+                <Route path="menu" element={<Prout><Menu/></Prout>}/>
+                <Route path="gallery" element={<Prout><Gallery/></Prout>}/>
+                <Route path="admin" element={<Prout><Admin/></Prout>}/>
                 <Route path="*" element={<PageNotFound/>}/>
               </Route>
             </Routes>

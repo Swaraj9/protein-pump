@@ -14,7 +14,6 @@ const Navbar = () => {
   const handleSubmit = async() => {
     try{
       await logOut();
-      console.log("Success")
     }catch(err){
       alert(err.message)
     }

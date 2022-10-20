@@ -31,3 +31,41 @@
         grid-template-columns: auto;
     }
 }
+
+.adminAddMenu, .adminAddCoupon{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    align-self: center;
+    font-size: 1.3rem;
+    background-color: var(--black);
+    padding: 1rem;
+    border-radius: 5px;
+    width: fit-content;
+    margin-bottom: 2rem;
+}
+
+.adminAddCoupon{
+    flex-direction: column;
+}
+
+
+.adminAddMenuInput, .adminAddCouponInput{
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 5px;
+    padding: 0.25rem;
+    font-size: 1rem;
+    width: 300px;
+    margin-top: 1rem;
+}
+
+.adminAddMenuTextInputs{
+    margin-right: 1.5rem;
+}
+
+.adminAddMenuButton{
+    background-color: var(--primary);
+    border-radius: 5px;
+    padding: 0.25rem;
+}
